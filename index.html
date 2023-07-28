@@ -275,7 +275,23 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
             .flag:hover { margin: -4px 6px; width: 48px; height: 48px; border: 0px #ffff00 outset; border-radius: 16px; background-color: yellow;
             }
 
- 
+            #page1pic {
+                position: relative; display: block;
+                width: 100%; height: 600px; margin: 0; top: -450px; margin-bottom: -450px;
+                background-image: url("images/page1pic.jpg"); 
+                    background-repeat: no-repeat;
+                    background-color: #cccccc;
+                    background-position: center;
+                
+            }
+
+            #clickToSee {
+                position: relative; display: block;
+                margin: 50% auto auto 50%; left: -150px; top: -50px; width: 300px; height: 100px;
+                font-size: 20px; font-weight: bold; text-align: center;
+                background-color: rgb(255,122,79); color: black;
+                border-width: 0px; 
+            }
 
     </style>
         
@@ -294,7 +310,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
         
 
 </head>
-<body       itemscope itemtype="https://schema.org/WebSite">
+<body       itemscope itemtype="https://schema.org/WebSite" onload="DetermineIfPDFviewer()">
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="iMT19ZYI"></script>
 
@@ -351,9 +367,14 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
 
 
-    <embed src="rebuke.pdf" type="application/pdf" width="100%" height="600px" />
-
-
+    <embed id="embeddedPDF" src="rebuke.pdf" type="application/pdf" width="100%" height="600px" />
+    <a id="page1pic" href="rebuke.pdf" title="Click to see PDF">
+        <div id="clickToSee" >
+            Click to see English PDF 
+            <br>
+            <span style="font-size: 15px; color: #777;">(other languages below)</span>
+        </div>
+    </a>
 
 
 
@@ -381,6 +402,93 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
                                       itemscope itemtype="https://schema.org/WPFooter">
 
             <script>
+                function DetermineIfPDFviewer() {
+                                        // http://thecodeabode.blogspot.com
+                    // @author: Ben Kitzelman
+                    // @license:  FreeBSD: (http://opensource.org/licenses/BSD-2-Clause) Do whatever you like with it
+                    // @updated: 03-03-2013
+
+                    var getAcrobatInfo = function() {
+
+                      var getBrowserName = function() {
+                        return this.name = this.name || function() {
+                          var userAgent = navigator ? navigator.userAgent.toLowerCase() : "other";
+
+                          if(userAgent.indexOf("chrome") > -1)        return "chrome";
+                          else if(userAgent.indexOf("safari") > -1)   return "safari";
+                          else if(userAgent.indexOf("msie") > -1)     return "ie";
+                          else if(userAgent.indexOf("firefox") > -1)  return "firefox";
+                          return userAgent;
+                        }();
+                      };
+
+                      var getActiveXObject = function(name) {
+                        try { return new ActiveXObject(name); } catch(e) {}
+                      };
+
+                      var getNavigatorPlugin = function(name) {
+                        for(key in navigator.plugins) {
+                          var plugin = navigator.plugins[key];
+                          if(plugin.name == name) return plugin;
+                        }
+                      };
+
+                      var getPDFPlugin = function() {
+                        return this.plugin = this.plugin || function() {
+                          if(getBrowserName() == 'ie') {
+                            //
+                            // load the activeX control
+                            // AcroPDF.PDF is used by version 7 and later
+                            // PDF.PdfCtrl is used by version 6 and earlier
+                            return getActiveXObject('AcroPDF.PDF') || getActiveXObject('PDF.PdfCtrl');
+                          }
+                          else {
+                            return getNavigatorPlugin('Adobe Acrobat') || getNavigatorPlugin('Chrome PDF Viewer') || getNavigatorPlugin('WebKit built-in PDF');
+                          }
+                        }();
+                      };
+
+                      var isAcrobatInstalled = function() {
+                        return !!getPDFPlugin();
+                      };
+                      var getAcrobatVersion = function() {
+                        try {
+                          var plugin = getPDFPlugin();
+
+                          if(getBrowserName() == 'ie') {
+                            var versions = plugin.GetVersions().split(',');
+                            var latest   = versions[0].split('=');
+                            return parseFloat(latest[1]);
+                          }
+                          if(plugin.version) return parseInt(plugin.version);
+                          return plugin.name
+                        }
+                        catch(e) {
+                          return null;
+                        }
+                      }
+
+                      // The returned object
+                      return {
+                        browser:        getBrowserName(),
+                        acrobat:        isAcrobatInstalled() ? 'installed' : false,
+                        acrobatVersion: getAcrobatVersion()
+                      };
+                    };
+
+                    var hasPdfViewer = getAcrobatInfo().acrobat ==="installed";
+                    
+                    if (hasPdfViewer == false) { 
+                        document.getElementById('embeddedPDF').style.display = 'none';
+                        document.getElementById('page1pic').style.display = 'block';
+                    } else { 
+                        document.getElementById('embeddedPDF').style.display = 'block';
+                        document.getElementById('page1pic').style.display = 'none';
+                    }
+                }                
+
+
+
                 function alertCitation() {
                     var NewestEdition = '';
                     alert('Basic form: \n Author. Title. Edition. Place of production: Producer, Date of copyright or production.\n------------------------------\nDavid Rudmin. RebukeFrancis.com.  Online. David Rudmin: Harrisonburg, VA, 2023.')
