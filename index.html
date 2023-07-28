@@ -479,6 +479,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
                     var hasPdfViewer = getAcrobatInfo().acrobat ==="installed";
                     
                     if (hasPdfViewer == false) { 
+                        alert("Sorry, but your browser cannot display a PDF. \n Please open this website in a normal browser-app, such as Chrome.")
                         document.getElementById('embeddedPDF').style.display = 'none';
                         document.getElementById('page1pic').style.display = 'block';
                     } else { 
