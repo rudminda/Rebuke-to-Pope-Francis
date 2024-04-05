@@ -158,32 +158,6 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
         }
         #pageTitleNAROWSCREEN {display: none; }
 
-        .topbuticon {font-size: 30px;  line-height: 20px;}      
-        #topButtons, #tableButtons {
-            width: 100%; height: auto; display: flex;
-            flex-wrap: wrap; justify-content: center;
-        }
-        .topBut, .tableBut { min-width: 100px; width: auto; height: auto; 
-            position: relative; display: block; z-index: 4;
-            margin: 0px 10px; padding: 4px 4px 1px 4px;
-            border: #aaa outset 7px;  
-            text-align: center; font-size: 15px; font-family: Helvetica; font-weight: bold; color: rgb(251,245,245);
-            background-color: rgb(26,25,30); cursor: pointer;
-        }
-
-        .topBut:hover, .tableBut:hover, .selected {font-size: 20px; padding: 6px 6px 2px 6px; margin: -5px -16px -5px -16px; line-height: 25px; z-index: 5;
-        border: rgb(237,208,205) inset 9px; 
-        background-color: rgb(237,208,205); color: rgb(76,42,42);
-        }              
-        .topBut:hover {border-radius: 8px;}
-        .topBut:hover {border-radius: 10px;}
-        .selected, .selected:hover {min-width: 100px; width: auto; height: auto; 
-            position: relative; display: block; z-index: 4;
-            margin: 0px 10px; padding: 4px 4px 1px 4px;
-            border: rgb(237,208,205) inset 7px;  
-            text-align: center; font-size: 15px; font-family: Helvetica; font-weight: bold;
-            background-color: rgb(237,208,205); color: rgb(76,42,42); cursor: pointer;};
-
         @media (max-width: 805px) {
               #pageTitle {display: none; }
               #pageTitleNAROWSCREEN {display: flex; flex-wrap: wrap; justify-content: center; 
@@ -321,6 +295,32 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
                 border-radius: 35px; 
             }
 
+        .topbuticon {font-size: 30px;  line-height: 20px;}      
+        #topButtons, #tableButtons {
+            width: 100%; height: auto; display: flex;
+            flex-wrap: wrap; justify-content: center;
+        }
+
+            .topBut, .tableBut { min-width: 100px; width: auto; height: auto; 
+                position: relative; display: block; z-index: 4;
+                margin: 0px 10px; padding: 4px 4px 1px 4px;
+                border: #aaa outset 7px;  
+                text-align: center; font-size: 15px; font-family: Helvetica; font-weight: bold; color: rgb(251,245,245);
+                background-color: rgb(26,25,30); cursor: pointer;
+            }
+
+            .topBut:hover, .tableBut:hover, .selected {font-size: 20px; padding: 6px 6px 2px 6px; margin: -5px -16px -5px -16px; line-height: 25px; z-index: 5;
+            border: rgb(237,208,205) inset 9px; 
+            background-color: rgb(237,208,205); color: rgb(76,42,42);
+            }              
+            .topBut:hover {border-radius: 8px;}
+            .topBut:hover {border-radius: 10px;}
+            .selected, .selected:hover {min-width: 100px; width: auto; height: auto; 
+                position: relative; display: block; z-index: 4;
+                margin: 0px 10px; padding: 4px 4px 1px 4px;
+                border: rgb(237,208,205) inset 7px;  
+                text-align: center; font-size: 15px; font-family: Helvetica; font-weight: bold;
+                background-color: rgb(237,208,205); color: rgb(76,42,42); cursor: pointer;};
     </style>
         
 <!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -342,7 +342,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="iMT19ZYI"></script>
 
-    <link   itemprop="url" href="https://rebukefrancis.com/"/>
+    <link   itemprop="url" href="https://ancientmiddleeast.com/"/>
     
   
     <!--Facebook SDK for Like button-->
@@ -389,7 +389,8 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
          <div class="fb-like" data-href="https://www.facebook.com/profile.php?id=100095189114708" data-width="" data-layout="" data-action="" data-size="" data-share="true" style="position: relative; float: right; display: block; z-index: 80; width: 125px; overflow: hidden; top: 5px;  right: 30px; "></div>
                  <a href="https://conservativechange.org/?p=8872" style="position: relative; float: center; top: 5px; font-style: italic; background-color: transparent; text-align: center; border-radius: 15px; padding: 3px 7px; color: rgb(204,0,102); font-size: 15px;">Sign the petition! </a>
      </div>
-  
+
+    
     <!-- top buttons -->
     <script>
         function goto(link1) {
@@ -397,63 +398,43 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
         }
     </script>
     <div id="topButtons" style="background-color: transparent; margin-top: 0; top: -20px; position: relative; ">
-        <div id="soundbyte" class="topBut selected" title="See a short list of all the charges against Pope Francis.">Sound-byte Charges<br><span class="topbuticon">📋</span></div>
-        <div id="academic"  class="topBut" title="40-page cited academic paper, with clickable links" onclick="goto('./rebuke.html')">Academic Rebuke<br><span class="topbuticon">🎓</span></div>
+        <div id="soundbyte" class="topBut" title="See a short list of all the charges against Pope Francis." onclick="goto('./index.html')">Sound-byte Charges<br><span class="topbuticon">📋</span></div>
+        <div id="academic"  class="topBut selected" title="40-page cited academic paper, with clickable links" onclick="goto('./rebuke.html')">Academic Rebuke<br><span class="topbuticon">🎓</span></div>
         <div id="sitethics" class="topBut" title="Comparison-chart of Pope John Paul II's condemnation of Situation Ethics to various documents of Pope Francis." onclick="goto('./sit-ethics.html')">Situation Ethics<br><span class="topbuticon">👶</span></div>
         <div id="videos"    class="topBut" onclick="goto('./videos.html')">Videos<br><span class="topbuticon">🖥️</span></div>
     </div>
 
-    <div id="talkingPts">
-       <!--h5 style="text-align: center;">
-           Short Version Talking points:  
-       </h5-->
-       <style>
-        .this-title {color: white; font-size: 50px;
 
-            text-shadow: 1px 1px black,
-                         1px -1px black,
-                        -1px  1px black,
-                        -1px -1px black,
-                         3px  3px 4px black,
-                         3px -3px 4px black,
-                        -3px  3px 4px black,
-                        -3px -3px 4px black;
 
-        }
-        </style>
-       <h1 class="titles this-title" style="">Crimes of Pope Francis:</h1>
-       <br>
-        <!--h3 style="text-align: center; font-size: 40px;">
-           <b><u>Crimes of Pope Francis:</u></b>
-       </h3-->
-
-       <ul  style="margin: auto; width: 90%; font-family: Times; list-style-type: none; padding-left: 5em; text-indent: -4em; ">
-          <li>1️⃣ - He has supported the dual material heresies of Communion🍞🍷🤝 for the Divorced-and-Remarried, and now Syncretism☪️✡️☮️🕎🕉, women deacons, and (but not a heresy) married priests.</li>
-          <li>2️⃣ - He has done the one thing that can destroy the church in ⭐Communist🇨🇳China⭐, even preaching "the party," and received an annual $2 Billion bribe from the Chinese government, in exchange.</li>
-          <li>3️⃣ - He has planted the seeds for a future Islamic☪️ civil war in Europe.</li>
-          <li>4️⃣ - He has surrounded himself with homosexuals🏳️‍🌈🤩, and permitted them to promote⬆️ their friends.</li>
-          <li>5️⃣ - He has opted for silence in the face of the homosexual🐺🐺child-abuse crisis, even silencing whole Bishops' conferences who sought to deal with the scandal, and even covering for his favorite Cardinals, while ignoring victims👦🚫, even in his own diocese in Argentina.</li>
-          <li>6️⃣ - He has attempted to thwart his own public accuser📢👀🕵️‍♀️, Archbishop Vigano.</li>
-          <li>7️⃣ - He has clouded💭💨 clear, Death-penalty teaching in the Catechism, just to make a leftist name for himself.</li>
-          <li>8️⃣ - He has tied the holy, supernatural, moral authority of the church to a dubious, unscientific, global-warming☀️🌍 fad.</li>
-          <li>9️⃣ - He has scandalized the faithful by carrying a 🧙‍♂️witch's "stang"🧙‍♀️, during Holy Mass, in place of the Papal Crucifix, or crosier.</li>
-          <li>1️⃣0️⃣-  - He has condoned an ongoing, pagan ritual in the Vatican, involving kneeling on a "mandala," and bowing in a circle to 2 pregnant, naked indian statues, probably signifying Mother🌍Earth, possibly even her deified caricature as "Pachamama."</li>
-          <li>1️⃣1️⃣ - He has refused to repent, after a manifest scourge from God basically ended his papacy-&-Globalist movement's relevance, opting instead to ascribe the pandemic to 'Mother Earth throwing a fit.' No eyes of faith here.🙄</li>
-          <li>1️⃣2️⃣ - He has handwritten notes of praise to 🏳️‍🌈Fr. James Martin & Sr. Jeannine Gramick, the most extreme sexual heretics in the history of the church.</li>
-          <li>1️⃣3️⃣ - On behalf of moral anarchy, he has twice short-circuited the USCCB's sovereign judicial role, first by ordering them not to create lay child-abuse review boards, then by welcoming Pro-Abortion leaders 🇺🇸 Nancy Pelosi & Joe Biden 🇺🇸 for photo-ops, at the precise moment when their ecclesial status was under review by the USCCB.</li>
-          <li>1️⃣4️⃣ - Even as his favored cardinals were tolerating the most heinous Liturgical abuses, worldwide, he dynamited many of the fervents' only licit 🕍Tridentine masses.🕍</li>
-          <li>1️⃣5️⃣ - He preached seeming heresy, falling under Pope Pius XII's condemnation by teaching that only faith is necessary for reception of Communion, not 🕊Sanctifying Grace.🕊</li>
-          <li>1️⃣6️⃣ - He insta-rehabilitated his ally, the serial rapist Fr. Marko Rupnik, SJ, in the very same week or month that he finally prevailed upon ordinaries to laicize or remove the holy servants of God Fr. Frank Pavone & ♗Bp. Joseph Strickland.♗ </li>
-          <li>1️⃣7️⃣ - He has made an 💣anarchic mockery of laws💣, by telling seminarians to absolve everyone, even unrepentant sinners.</li>
-          <li>1️⃣8️⃣ - He has downplayed the severity of 🏳️‍🌈Homosexuality as a mere sin, like uncharity, when it's actually ALWAYS a mortal sin. </li>
-          <li>1️⃣9️⃣ - He has praised ✊Paolo Freire✊, who blasphemes the mysteries of Redemption, transforming them into 🇻🇳 Communist talking-points 🇻🇳.</li>
-          <li>2️⃣0️⃣- He has permitted a gay👯‍♂dancer to dance half nude on St. Peter's Basilica's outdoor altar.</li>
-          <li>2️⃣1️⃣ - He has staged a supposedly 👂🎧"listening" Synod of mostly liberals--mainly Jesuits & their associates--on the model of the ⭐🇻🇳"Congress of Soviets,"🇻🇳⭐ as if there could ever be a non-episcopal 🏛'legislative branch'🏛 in the Catholic church.</li>
-          <li>2️⃣2️⃣ - He has, through his henchmen, repeatedly & deliberately attempted to confuse & mislead everyone, by 🐍flattering everyone🐍 on both sides of the aisle.</li>
-       </ul>
+    <embed id="embeddedPDF" src="rebuke.pdf" type="application/pdf" width="100%" height="600px" />
+    <div id="page1pic" href="rebuke.pdf" title="Click to see PDF">
+        <div id="clickToSee" >
+            ⚠Sorry, your app can't view this PDF.
+            <br>
+            <span style="font-size: 15px; color: #444;">(Open RebukeFrancis.com in a browser like Chrome.)</span>
+        </div>
     </div>
 
 
+
+    <hr id="footerDivider">
+<h3 style="text-align: center;">PDFs:</h3>
+<div id="langs" style="width: 100%; font-size: 20px; text-align: center; display: flex; flex-wrap: wrap; justify-content: center;">
+    
+    <br>
+    <a href="rebuke.pdf"  title="Read original, untranslated version in English!"><img class="flag" src="images/flags/great-britain.png"/></a>
+    <a href="langs/rebuke-esp.pdf"  title="Read Google Translated version in Spanish!" ><img class="flag" src="images/flags/spain-2.png"/></a>
+    <a href="langs/rebuke-ita.pdf"  title="Read Google Translated version in Italian!" ><img class="flag" src="images/flags/italy.png"/></a>
+    <a href="langs/rebuke-por.pdf"  title="Read Google Translated version in Portuguese!" ><img class="flag" src="images/flags/portugal.png"/></a>
+    <a href="langs/rebuke-fre.pdf"  title="Read Google Translated version in French!" ><img class="flag" src="images/flags/france.png"/></a>
+    <a href="langs/rebuke-ger.pdf"  title="Read Google Translated version in German!" ><img class="flag" src="images/flags/german.png"/></a>
+    <a href="langs/rebuke-pol.pdf"  title="Read Google Translated version in Polish!" ><img class="flag" src="images/flags/poland.png"/></a>
+    <a href="langs/rebuke-rus.pdf"  title="Read Google Translated version in Russian!" ><img class="flag" src="images/flags/russia.png"/></a>
+    <a href="langs/rebuke-chi.pdf"  title="Read Google Translated version in Mandarin Chinese!" ><img class="flag" src="images/flags/china.png"/></a>
+    <a href="langs/rebuke-ara.pdf"  title="Read Google Translated version in Arabic!" ><img class="flag" src="images/flags/saudi_arabia.png"/></a>
+    <a href="langs/rebuke-hin.pdf"  title="Read Google Translated version in Hindi!" ><img class="flag" src="images/flags/india.png"/></a>
+
+</div>
 
     <hr id="footerDivider2" style="position: relative;">
 
@@ -462,6 +443,92 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
                                       itemscope itemtype="https://schema.org/WPFooter">
 
             <script>
+                function DetermineIfPDFviewer() {
+                                        // http://thecodeabode.blogspot.com
+                    // @author: Ben Kitzelman
+                    // @license:  FreeBSD: (http://opensource.org/licenses/BSD-2-Clause) Do whatever you like with it
+                    // @updated: 03-03-2013
+
+                    var getAcrobatInfo = function() {
+
+                      var getBrowserName = function() {
+                        return this.name = this.name || function() {
+                          var userAgent = navigator ? navigator.userAgent.toLowerCase() : "other";
+
+                          if(userAgent.indexOf("chrome") > -1)        return "chrome";
+                          else if(userAgent.indexOf("safari") > -1)   return "safari";
+                          else if(userAgent.indexOf("msie") > -1)     return "ie";
+                          else if(userAgent.indexOf("firefox") > -1)  return "firefox";
+                          return userAgent;
+                        }();
+                      };
+
+                      var getActiveXObject = function(name) {
+                        try { return new ActiveXObject(name); } catch(e) {}
+                      };
+
+                      var getNavigatorPlugin = function(name) {
+                        for(key in navigator.plugins) {
+                          var plugin = navigator.plugins[key];
+                          if(plugin.name == name) return plugin;
+                        }
+                      };
+
+                      var getPDFPlugin = function() {
+                        return this.plugin = this.plugin || function() {
+                          if(getBrowserName() == 'ie') {
+                            //
+                            // load the activeX control
+                            // AcroPDF.PDF is used by version 7 and later
+                            // PDF.PdfCtrl is used by version 6 and earlier
+                            return getActiveXObject('AcroPDF.PDF') || getActiveXObject('PDF.PdfCtrl');
+                          }
+                          else {
+                            return getNavigatorPlugin('Adobe Acrobat') || getNavigatorPlugin('Chrome PDF Viewer') || getNavigatorPlugin('WebKit built-in PDF');
+                          }
+                        }();
+                      };
+
+                      var isAcrobatInstalled = function() {
+                        return !!getPDFPlugin();
+                      };
+                      var getAcrobatVersion = function() {
+                        try {
+                          var plugin = getPDFPlugin();
+
+                          if(getBrowserName() == 'ie') {
+                            var versions = plugin.GetVersions().split(',');
+                            var latest   = versions[0].split('=');
+                            return parseFloat(latest[1]);
+                          }
+                          if(plugin.version) return parseInt(plugin.version);
+                          return plugin.name
+                        }
+                        catch(e) {
+                          return null;
+                        }
+                      }
+
+                      // The returned object
+                      return {
+                        browser:        getBrowserName(),
+                        acrobat:        isAcrobatInstalled() ? 'installed' : false,
+                        acrobatVersion: getAcrobatVersion()
+                      };
+                    };
+
+                    var hasPdfViewer = getAcrobatInfo().acrobat ==="installed";
+                    
+                    if (hasPdfViewer == false) { 
+                        alert("Sorry, but your browser cannot display a PDF. \n Please open RebukeFrancis.com in a normal browser-app, such as Chrome.")
+                        document.getElementById('embeddedPDF').style.display = 'none';
+                        document.getElementById('page1pic').style.display = 'block';
+                    } else { 
+                        document.getElementById('embeddedPDF').style.display = 'block';
+                        document.getElementById('page1pic').style.display = 'none';
+                    }
+                }                
+
 
 
                 function alertCitation() {
@@ -471,9 +538,9 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
             </script>
                 
             <div id="links" class="row" style="width: auto; border:0px; margin: 0px 40px;">
-                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><li>Home</li></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./index.html"><li>Home</li></a></ul>
                 <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./about.pdf"><li>About</li></a></ul>
-                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./rebuke.html"><li>Academic Rebuke </li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><li>Academic Rebuke</li></ul>
                 <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./sit-ethics.html"><li>Situation Ethics</li></a></ul>
                 <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./flyer.pdf"><li>Print flyers</li></a></ul>
                 <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./index.html#links" onclick="alertCitation()"><li>Citation</li></a></ul>

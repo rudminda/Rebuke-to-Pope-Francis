@@ -1,0 +1,669 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/tab_icon%204x.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JQuery -->
+    <script src="./images/jquery-3.7.1.min.js"></script>
+
+    <title>Rebuke Francis: Situation Ethics</title>
+
+    <style>
+
+/*          In order to make this style section work, 
+            first, I added these Ids to the code, far below:
+
+ 
+                        table#bannerTable 
+                            tr#banner 
+                                td#bannerPic 
+                                td#bannerLinks 
+                            font#headline 
+                            font#clubDescrip
+                            tr#permanentEvtsRow
+                                td#supportedEvts
+                                td#featuredRace 
+
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+     MMMMMMMMMM    MMMMMMMMMMMMMM   MMMM    MMMM   MMMM            MMMMMMMMMMMMM
+    MMMMMMMMMMMM   MMMMMMMMMMMMM     MMMM  MMMM    MMMM            MMMMMMMMMMMMM
+    MMMM                MMMM          MMMMMMMM     MMMM            MMMM         
+    MMMMMMMM            MMMM           MMMMMM      MMMM            MMMMMMMMM    
+      MMMMMMMMM         MMMM            MMMM       MMMM            MMMMMMMMM    
+           MMMMM        MMMM            MMMM       MMMM            MMMM         
+    MMMM    MMMM        MMMM            MMMM       MMMM            MMMM         
+    MMMMMMMMMMMM        MMMM            MMMM       MMMMMMMMMMMMM   MMMMMMMMMMMMM
+     MMMMMMMMMM         MMMM            MMMM       MMMMMMMMMMMMM   MMMMMMMMMMMMM
+
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+        */
+        body {
+            margin: 0; padding: 0;
+            min-width: fit-content;
+            background-color: #e6f2ff; 
+            background-image: linear-gradient(to right, #ff794d, #e6f2ff);
+            
+            background-repeat: repeat-y;
+            background-size: 100%;
+        }
+        
+        #banner {position: relative; display: block;
+            width: 100%; height: 250px; background-image: url('images/banner2.png'); 
+            background-color: transparent; 
+            background-position: top center; 
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            
+        }
+
+        #bannerImg { 
+            position: relative; display:  block; z-index: 20;
+            width: auto; min-width: 267px; max-height: 167px;
+            
+        }
+ 
+        .topLogo {
+            position: absolute; top: 5px;
+            width:31px; height: auto; margin: 5px 25px;
+
+        }
+        .topLogo:hover {
+            width:37px; height: auto; margin: 2px 22px;
+        }
+        .bottomLogo {
+            position: relative; 
+            width:31px; height: auto; margin: 15px 30px 0px 0px;
+
+        }
+        .bottomLogo:hover {
+            width:37px; height: auto; margin: 12px 27px -3px -3px;
+        }        
+
+        #Subtext {
+            position: relative; display: none; z-index: 10;
+            bottom: 26.7px; left:  0px;
+            
+            width: 100%; height: 34px; line-height: 20px; 
+            overflow: hidden; white-space: normal;
+            padding-right: 3%; margin: 0px;
+            border-width: 6.7px 0px; border-style: double; border-color: #b30059; border-radius: 0px;
+            text-align: right;
+            
+            font-family: Arial; font-size: 20px; color: #ff80bf; 
+             
+        }
+        #Subtext2 {
+            position: relative; display: block; z-index: 60;
+            left:  0px; top: -5vw;
+            
+            width: 100%; min-height: 34px;  min-height: 34px; line-height: 20px; 
+            overflow-x: hidden; white-space: normal;
+            margin: 0px;
+            border-width: 0px 0px; border-style: double; border-color: #b30059; border-radius: 0px;
+            text-align: center;  
+            
+            font-family: Arial; font-size: 20px; color: #cc0066; 
+             
+        }        
+
+
+        #pageTitle {
+           font-size: 95px; line-height: 80px; 
+           width: 45%; max-width: 45%; min-width: 300px; 
+        }
+        #pageTitleNAROWSCREEN {display: none; }
+
+        .topbuticon {font-size: 30px;  line-height: 20px;}      
+        #topButtons, #tableButtons {
+            width: 100%; height: auto; display: flex;
+            flex-wrap: wrap; justify-content: center;
+        }
+
+            .topBut, .tableBut { min-width: 100px; width: auto; height: auto; 
+                position: relative; display: block; z-index: 4;
+                margin: 0px 10px; padding: 4px 4px 1px 4px;
+                border: #aaa outset 7px;  
+                text-align: center; font-size: 15px; font-family: Helvetica; font-weight: bold; color: rgb(251,245,245);
+                background-color: rgb(26,25,30); cursor: pointer;
+            }
+
+            .topBut:hover, .tableBut:hover, .selected {font-size: 20px; padding: 6px 6px 2px 6px; margin: -5px -16px -5px -16px; line-height: 25px; z-index: 5;
+            border: rgb(237,208,205) inset 9px; 
+            background-color: rgb(237,208,205); color: rgb(76,42,42);
+            }              
+            .topBut:hover {border-radius: 8px;}
+            .topBut:hover {border-radius: 10px;}
+            .selected, .selected:hover {min-width: 100px; width: auto; height: auto; 
+                position: relative; display: block; z-index: 4;
+                margin: 0px 10px; padding: 4px 4px 1px 4px;
+                border: rgb(237,208,205) inset 7px;  
+                text-align: center; font-size: 15px; font-family: Helvetica; font-weight: bold;
+                background-color: rgb(237,208,205); color: rgb(76,42,42); cursor: pointer;};
+            .tableBut { border-radius: 25px;}
+
+            }
+            .tableBut:hover { border-radius: 30px;}
+
+            }            
+        @media (max-width: 805px) {
+              #pageTitle {display: none; }
+              #pageTitleNAROWSCREEN {display: flex; flex-wrap: wrap; justify-content: center; 
+                background-color: black; 
+                top: 19vw;
+                 font-size: 11vw; line-height: 9vw; 
+                 width: 100%; 
+
+              }
+        }
+        @media (max-width: 305px) {
+              #pageTitle {display: none; }
+              #pageTitleNAROWSCREEN {display: flex; flex-wrap: wrap; justify-content: center; 
+                background-color: black;   
+                top: 49px;
+                 font-size: 80px; line-height: 9vw; 
+
+                 width: 300px; width: all; min-width: 330px; margin-left: 50%; left: -150px;
+
+              }
+              #pageTitleNAROWSCREEN div {background-color: black; position: relative; left: 50px; padding: 0;  }
+        }
+
+
+        .titles {position: relative; display: block;
+            margin: 0px auto;
+            width: 50%;
+            
+            text-align: center;
+        }
+
+        .infoBlock {
+            width: 90%; margin: 0px 5%;
+            font-size: 15px;
+        }
+        #footerDivider {
+            position: relative; display: block; z-index: 10;
+                        
+            width: 100%; height: 34px; line-height: 20px; 
+            padding-right: 10%; margin: 26.7px 0px;
+            border-width: 6.7px 0px; border-style: double; border-color: #b30059; border-radius: 0   px;
+            text-align: right;
+            
+            font-family: Arial; font-size: 20px; color: #ff80bf; 
+             
+        }
+
+
+        hr {background-color: #fff;}
+
+
+
+        .archive /*xl; see other breakppoints below*/ { cursor: pointer;
+                    position: relative; display: block; float: left;
+                    width: 267px; height: 267px; padding: 0; 
+                    border-width: 10px; border-radius: 20px; border-style: outset; border-color: black; 
+                    margin: 10.7px;
+                 }
+            
+                .archiveTitle {
+                    position: relative; float: left;
+                    font-size: 23.35px;
+                    text-shadow: 3.3px 3.3px 3.3px white;
+                }
+        
+
+        .archive:hover {  
+                    position: relative; display: block; float: left;
+                    margin: 10.7px; padding: 0;
+                    border: 10px outset #ffc; border-radius: 20px;}
+
+                .archiveImg {width: 100%; height: auto;
+                    border: 0px 
+                }
+                .archiveImg:hover {
+                    width: 110%; height: auto;
+                    margin: -5%;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    border: 10px outset #ffc; 
+                }
+
+                .archiveTextDIV {
+                    position: absolute; display: block;
+                    font-family: Calibri; 
+                    width: 100%; text-align: center; 
+                    border-width: 0px; border-radius: 0px;
+                    font-weight:  bold; color:  white;
+                }
+
+
+                    .fix1 {margin: 0px; font-size: 25px;}
+
+
+        #PDFVersion {
+            position: relative; display: block; float: left; cursor: pointer;
+            width: 130px; height: 60px;
+            padding: 10px; margin: -20px -30px -40px 0px; 
+            background-color: yellow; color: black;
+            border-radius: 0px 25px 25px 0px; border-style: solid; border-color: blue; 
+            border-width: 7px 7px 7px 0px;
+            font-size: 16px; 
+        }
+        #PDFVersion:hover { cursor: pointer;
+            width: 150px; height: 70px;
+            padding: 12px; margin: -30px 0px -10px 0px;
+            background-color: white; color: blue;
+            border-radius: 0px 25px 25px 0px; border-style: solid; border-color: blue; 
+            border-width: 10px 10px 10px 0px;
+            font-size: 20px; font-weight: bold;
+        }
+
+
+ 
+
+/*
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+     MMMMMMMMMM    MMMMMMMMMMMMMM   MMMM    MMMM   MMMM            MMMMMMMMMMMMM
+    MMMMMMMMMMMM   MMMMMMMMMMMMM     MMMM  MMMM    MMMM            MMMMMMMMMMMMM
+    MMMM                MMMM          MMMMMMMM     MMMM            MMMM         
+    MMMMMMMM            MMMM           MMMMMM      MMMM            MMMMMMMMM    
+      MMMMMMMMM         MMMM            MMMM       MMMM            MMMMMMMMM    
+           MMMMM        MMMM            MMMM       MMMM            MMMM         
+    MMMM    MMMM        MMMM            MMMM       MMMM            MMMM         
+    MMMMMMMMMMMM        MMMM            MMMM       MMMMMMMMMMMMM   MMMMMMMMMMMMM
+     MMMMMMMMMM         MMMM            MMMM       MMMMMMMMMMMMM   MMMMMMMMMMMMM
+
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+*/
+    </style>
+
+
+</head>
+<body onload="DetermineIfPDFviewer()">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="bROL3ioa"></script>
+
+   <div id="banner"   
+                                  itemscope itemtype="https://schema.org/WPHeader">
+        <!-- Github Button >
+        <a href="https://github.com/rudminda/Rebuke-to-Pope-Francis" title="Repository code for this website." target="_blank"><img class="topLogo" src="images/GitHub-Mark-32px.png" style="right: 10px; z-index: 80;" /></a-->
+
+        <!-- FB Button -->
+
+
+
+        <!-- FB Like Button -->
+        <!--div class="fb-like" data-href="https://www.facebook.com/profile.php?id=100095189114708" data-width="225px" data-layout="button_count" data-action="like" data-size="small" data-share="true" style=" z-index: 43;"></div-->
+        <!--div class="fb-like" data-href="https://ancientmiddleeast.com" data-ref="https://ancientmiddleeast.com" data-width="225px" data-layout="button_count" data-action="like" data-size="small" data-share="true" style=" z-index: 43;"></div-->
+        <!--img id="worldImg" src="images/ge.jpg" style="position: absolute; height: 250px; width: 1671px; min-width: 100%; margin-left: 50%; left: -835px;  z-index: -30;"-->
+        <img id="codeOfArms" src="images/coat%20of%20arms%20TRANSPARENT.png" style="position: absolute; height: 19vw; width: auto; margin-left: 50px;  z-index: 30;" />
+        <h1 id="pageTitle"  style="position: absolute; font-family: Garamond; color: white; height: 220px; margin-left: 20%; padding: auto 0px;  z-index: 50; ">
+            <div style="position: relative; float: left;">Rebuke</div>
+            <br>
+            <div style="position: relative; float: right;">Francis</div>
+        </h1>
+
+        <img id="popeFrancisProfile" src="images/Pope%20Francis%20profile%20TRANSPARENT.png" style="position: relative; float: right; height: 19vw; width: auto; margin-right: 50px;  z-index: 30;" />
+
+
+         
+    </div>
+    <h1 id="pageTitleNAROWSCREEN"  style="position: absolute; font-family: Garamond; color: white; min-height: 110px; height: auto; width: 100vw; font-size:80px; line-height: 90px;  padding: auto 0px;  z-index: 50; text-align: center;">
+        <div style="position: relative; float: left; padding: 0px 20px 0px 20px; " >Rebuke</div>
+        <div style="position: relative; float: left; padding: 0px 20px 0px 20px; " > Francis
+        </div>
+    </h1>
+
+
+    <!--Optional small device separator-->
+    <div id="Subtext2" class="" style="overflow-y: hidden; background-color: transparent;"
+            itemprop="abstract"
+         >
+                <!-- Github Button -->
+        <a href="https://github.com/rudminda/Rebuke-to-Pope-Francis" title="Repository code for this website." target="_blank"><img class="topLogo" src="images/GitHub-Mark-32px.png" style="position: relative; float: left; display: block; z-index: 80; width: 25px; overflow: hidden; top: 0px;  left: 30px;" /></a> 
+        <div class="fb-like" data-href="https://www.facebook.com/profile.php?id=100095189114708" data-width="" data-layout="" data-action="" data-size="" data-share="true" style="position: relative; float: right; display: block; z-index: 80; width: 125px; overflow: hidden; top: 5px;  right: 30px;"></div>
+                 <a href="https://conservativechange.org/?p=8872" style="position: relative; float: center; top: 5px; font-style: italic; background-color: transparent; text-align: center; border-radius: 15px; padding: 3px 7px; color: rgb(204,0,102); font-size: 15px;">Sign the petition! </a>
+     </div>
+
+    <!-- top buttons -->
+    <script>
+        function goto(link1) {
+            window.location = link1;
+        }
+    </script>
+    <div id="topButtons" style="background-color: transparent; margin-top: 0; top: -20px; position: relative; ">
+        <div id="soundbyte" class="topBut" title="See a short list of all the charges against Pope Francis." onclick="goto('./index.html')">Sound-byte Charges<br><span class="topbuticon">📋</span></div>
+        <div id="academic"  class="topBut" title="40-page cited academic paper, with clickable links" onclick="goto('./rebuke.html')">Academic Rebuke<br><span class="topbuticon">🎓</span></div>
+        <div id="sitethics" class="topBut selected" title="Comparison-chart of Pope John Paul II's condemnation of Situation Ethics to various documents of Pope Francis.">Situation Ethics<br><span class="topbuticon">👶</span></div>
+        <div id="videos"    class="topBut" onclick="goto('./videos.html')">Videos<br><span class="topbuticon">🖥️</span></div>
+    </div>
+
+    <br>
+    <style>
+        .this-title {color: white; font-size: 50px;
+
+            text-shadow: 1px 1px black,
+                         1px -1px black,
+                        -1px  1px black,
+                        -1px -1px black,
+                         3px  3px 4px black,
+                         3px -3px 4px black,
+                        -3px  3px 4px black,
+                        -3px -3px 4px black;
+        }
+    </style>
+
+    <h1 class="titles this-title" style="">Situation Ethics of Pope Francis</h1>
+    <br>
+    <p style="min-width: 35%; max-width: 85%; position: relative; display: block; margin: auto; text-align: center;"> <u>Situation Ethics</u> was thoroughly criticized by Pope John Paul II, in the left column of the chart below.
+    However, this has not stopped Pope Francis and/or Cardinal Fernandez from employing it <i> repeatedly </i>, in order to dissimulate and hide the truth, and thereby seem to appease both sides of moral issues. 
+    To more-perfectly master and understand the component parts of <u>Situation Ethics</u>, watch the appropriate section of the video, <a href="https://youtu.be/6BiMJNLCSuo?t=52" style="font-weight: bold;">here</a>.</p>  
+    <br>
+    <!--a href="./situation-ethics-chart.pdf" style="position: relative; display: blockwidth: 100%; margin-left: 50%; left: -150px; background-color: yellow;">Universal Chart of Francis' Situation Ethics</a>
+    <br><br-->
+    <h3 class="titles" style="clear: both;">Click a document:</h3>
+
+    <br>
+
+    <!-- table buttons -->
+    <div id="tableButtons" style="background-color: transparent; margin-top: 0; top: -20px; position: relative; ">
+        <div id="col3But"   data-status="false"  class="tableBut" title="See a short list of all the charges against Pope Francis." onclick="showTable(this.id, this)">Amoris Laetitia<br>(2016)</div>
+        <div id="col4But"  data-status="false" class="tableBut" title="40-page cited academic paper, with clickable links" onclick="showTable(this.id, this)">Dubia responses<br>(2023)</div>
+        <div id="col5But"  data-status="false"  class="tableBut" title="" onclick="showTable(this.id, this)">Fiducia Supplicans<br>(2023)</div>
+        
+    </div>
+
+    <div id="PDFVersion" onclick="goto('https://rebukefrancis.com/situation-ethics-chart.pdf')">PDF Version
+    </div>        
+
+    <img style="width: 200px; height: auto; position: relative; display: block; margin-left: 50%; left: -100px; top: -20px;" src="./images/arrow.png">
+
+    <!--                                                                                -->
+    <script>
+        function showTable(but, el) {
+            console.log(but.substring(0,4));
+            //console.log(el.getAttribute('data-status')); 
+            
+            var status = el.getAttribute('data-status');
+            //console.log('Data status is '); console.log($('#'+but+'But').attr('data-status'));
+            //console.log('Data attr 0 is '); console.log($('#'+but+'But').attr(0));
+            console.log($('#'+but+'But'));
+
+            if (status == "true") { console.log('true!');
+                $('.'+but.substring(0,4)).hide();
+                document.getElementById(but).setAttribute('data-status', false);
+                $('#'+but).css({
+                    'border':'outset #aaa 7px', 
+                    'background-color':'rgb(26,25,30)',
+                    'color': 'rgb(251,245,245)' 
+                });
+                //$('#'+but+'But').data('status', false);
+            } else { console.log('false!');
+                $('.'+but.substring(0,4)).show();
+                document.getElementById(but).setAttribute('data-status', true);
+                $('#'+but).css({
+                    'border':'outset rgb(0,0,0) 7px', 
+                    'background-color':'rgb(150,75,48)',
+                    'color': 'yellow'
+                });
+            }
+        }
+
+    </script>
+    <!--                                                                                -->
+    <style>
+        #docsTable {table-layout: auto;
+            position: relative; display: block;
+            margin: 50px 5%; margin-top: 0px;
+            width: 90%; max-width: 90%; height: auto;
+            font-size: 14px; padding: 8px; border: 3px solid red;
+        }
+        tr.row0 {text-align: center; }
+        tr.row0 th {font-size: 20px; background-color: #bbb;
+                border: 2px black solid;
+        }
+        .tableCell {margin: 0;
+            border: 3px solid black; resize: both; overflow: auto; 
+            font-size: 14px; line-height: 14px;  
+        }
+        .col1 { writing-mode: vertical-lr; text-orientation: upright;
+            width: 50px; background-color: #bbb; font-size: 14px; 
+  -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+        }
+        .col2 { 
+            width: 200px; height: auto; min-width: 200px; background-color: #ddd; font-size: 14px; border-width: 1px 6px 1px 1px; border-color: black rgb(248,158,132) black black; vertical-align: top; 
+        }
+        .col3, .col4, .col5 { display: none;
+            width: auto; height: auto; min-width: 200px; background-color: #fff; font-size: 14px; vertical-align: top; 
+        }
+        
+
+        tr.row0 th.col2 {font-size: 20px; background-color: #bbb;
+                border-style: solid;
+                border-width: 1px 6px 1px 1px; border-color: black rgb(248,158,132) black black; 
+        }
+
+
+        .red        { color: rgb(192,0,0); }
+        .green      { color: rgb(0,176,80); }
+        .orange     { color: rgb(255,102,0); }
+        .pink       { color: rgb(255,102,255); }
+        .blue       { color: rgb(0,176,240); }
+        .purple     { color: rgb(112,48,160); }
+        .black      { color: rgb(0,0,0); }
+        .tan        { color: rgb(204,153,0); }
+
+    </style>
+    <!--                                                                                -->
+    
+
+
+
+
+    <table id="docsTable"> 
+        <tr class="tableRow row0">
+            <th class="tableHeading col1"></th>
+            <th class="tableHeading col2">JPII's <a href="https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html">Veritatis Splendor</a> (1993)</th>
+            <th class="tableHeading col3">Pope Francis’ <a href="https://www.vatican.va/content/dam/francesco/pdf/apost_exhortations/documents/papa-francesco_esortazione-ap_20160319_amoris-laetitia_en.pdf#page=235">Amoris Laetitia</a> (2016)</th>
+            <th class="tableHeading col4">Pope Francis’ <a href="https://www.ncregister.com/cna/pope-francis-response-to-the-dubia">Responses</a> to the 2023 Dubia</th>
+            <th class="tableHeading col5">Cd. Fernandez’ <a href="https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20231218_fiducia-supplicans_en.html">Fiducia Supplicans</a> (2023)</th>
+        </tr>
+
+
+
+
+
+
+        <tr class="tableRow row1">
+            <td class="tableCell col1">COMPLEXITY</td>
+            <td class="tableCell col2">54 – "[General moral] <b class="blue">norms</b>, they [i.e, Situational Ethicists] continue, <b class="red">cannot be expected to foresee</b> and to respect <b class="black">all the individual</b> concrete acts of the person in all their <b class="green">uniqueness and particularity</b>.   These authors also stress the <b class="black">complexity</b> typical of the phenomenon of conscience, <b class="black">complexity</b> profoundly related to the whole sphere of <b class="orange">psychology</b> and <b class="pink">emotions</b>, and to the <b class="black">numerous</b> influences exerted by <b class="green">the individual's social and cultural environment</b>.”</td>
+
+            <td class="tableCell col3">295 – “. . . <b class="green">subjects who are not in a position</b> to understand, appreciate, or fully carry out the objective demands of the law." <br>
+            296 – “Consequently, there is a need to avoid judgments which do not take into account the <b class="black">complexity</b> of various situations" and "to be attentive, by necessity, to how people experience <b class="pink">distress</b> because of their condition.” <br>
+            298 – “The divorced who entered a new union, for example, can find themselves <b class="green">in a variety of situations, which should not be pigeonholed or fit into overly rigid classifications</b> . . . <b class="black">One thing is . . . There are also  . . . Another thing . . . or the case . . . We know that no 'easy recipes' exist.</b>”<br>
+            300 – “. . . the immense variety of concrete situations . . . neither the Synod nor the Exhortation <b class="black">could be expected to provide a new set of general rules, . . . applicable to all cases</b>.  What is possible is simply . . . pastoral discernment of <b class="green">particular cases</b>, . . .  Since ‘the degree of responsibility is not equal in all cases’, . . .  <b class="green">a rule need not necessarily always be the same</b>.”<br>
+            302 – “’doubtless there can occur situations which are very complex and obscure from a <b class="orange">psychological</b> viewpoint’, . . . ‘Under certain circumstances people find it <b class="pink">very difficult</b> to act differently.’”<br>
+            304 – ".  . .  the more we descend to <b class="green">matters of detail</b>, the more frequently we encounter <b class="black">defects. . . .  The principal will be found to fail</b>, according as we descend further into <b class="green">detail</b>.”</td>
+
+            <td class="tableCell col4">1g – (quoting AL 304)  “I would like to recall what St. Thomas Aquinas affirmed: “<b class="green">the more we descend to matters of detail, the more frequently we encounter defects</b>” (Summa Theologiae 1-11, q. 94, art. 4).”<br>
+2g – (quoting AL 304) “Decisions which, in certain circumstances, can form part of pastoral prudence, should not necessarily become a norm. .  . . it is not appropriate for a diocese, an episcopal conference or any other ecclesial structure to constantly and officially authorize procedures or rites for [blessing] <b class="black">all kinds of</b> matters, since all “that which forms part of a practical discernment <b class="green">in particular circumstances</b> cannot be elevated to the level of a rule, ‘<b class="green">because this “would lead to an intolerable casuistry</b>.”’ Canon law <b class="black">should not and cannot cover</b> <b class="green">everything</b>, nor should the episcopal conferences claim to do so with their <b class="black">various documents and protocols</b>, because the life of the Church <b class="black">runs through many channels</b> in addition to the normative ones.” [A doubly specious objection, 1st because the context wasn’t talking about universal Canon law or bishops-conference-protocols, but about “pastoral charity” by individuals; any 2nd because AL 304’s original warning against casuistry emerged in the negative context of penances for repentant individuals, whereas this new warning against casuistry here, is in the positive context of new “rites” of blessing for unrepentant individuals.]<br>
+5a-b – “a) Repentance is necessary for the validity of sacramental absolution, and implies the intention not to sin. <b class="green">But there is no mathematics here</b>. . .<br>
+b) <b class="green">There are many ways to express regret</b> . . .”<br>
+5d – “Finally, it should be clear that all the conditions that are usually placed on the confession are generally not applicable when the person is in a situation of <b class="pink">agony</b>, or with very <b class="orange">limited mental and psychological capacities</b>.”
+
+            </td>
+            <td class="tableCell col5">25 – “The Church, moreover, <b class="red">must shy away from resting</b> <b class="blue">its pastoral praxis</b> on <b class="red">the fixed nature</b> of certain doctrinal or disciplinary <b class="black">schemes</b>, especially when they lead to ‘<b class="black">a narcissistic and authoritarian elitism</b>, whereby instead of <b class="orange">evangelizing</b>, <b class="black">one analyzes and classifies</b> <b class="green">others</b>, and instead of <b class="pink">opening the door to grace</b> <i>[not real Grace, but just feel-good-experiences]</i>, <b class="black">one exhausts his or her energies in inspecting and verifying</b> [<b class="green">minutiae</b>].’  Thus, when <b class="green">people</b> ask for a blessing, <b class="black">an exhaustive moral analysis</b> <b class="red">should not be placed as a precondition</b> for conferring it.”  
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+        <tr class="tableRow row2">
+            <td class="tableCell col1">CREATIVITY</td>
+            <td class="tableCell col2">55 – “[Conscience], it is said [by Situation Ethicists] leads men not so much to a meticulous observance of the <b class="blue">universal norms</b> as to <b class="pink">a creative</b> and <b class="black">responsible</b> acceptance of the <b class="black">personal</b> tasks</b> entrusted to him by God.
+            In their desire to emphasize the ‘<b class="pink">creative</b>’ character of conscience, certain authors no longer call its actions <b class="blue">[intellectual] ‘judgments</b>’ but [<b class="black">existential, amoral</b>] ‘<b class="purple">decisions</b>’: only by making these <b class="purple">decisions</b> ‘<b class="black">autono-mously</b>’ would man be able <b class="tan">to attain moral maturity</b>.”  <br>
+            56 – “. . . based on a certain more concrete <b class="black">existential</b> consideration . . . An attempt is made . . . to justify a ‘<b class="pink">creative</b>’ hermeneutic according to which the moral conscience is <b class="red">in no way obliged, in every case</b>, by a particular <b class="blue">negative precept</b>."</td>
+
+            <td class="tableCell col3">293 – “<b class="tan">Gradualness</b> in pastoral care:  . . . pastoral care with a view to the <b class="tan">eventual</b> celebration of the sacrament of marriage. . . . elements that can foster evangelization and <b class="black">human</b> and spiritual <b class="pink">growth</b>."<br>
+295 - "St. John Paul II proposed the so-called ‘law of gradualness’ in the knowledge that the human being ‘knows, <b class="pink">loves</b>, and <b class="purple">accomplishes</b> moral good <b class="tan">by different stages of growth</b>’.  This is not a ‘gradualness of law’ but rather a gradualness in the <b class="pink">Prudential</b> exercise of <b class="black">free</b> <b class="purple">acts</b> on the part of subjects who are not in a position to understand . . . .  For . . . each human being advances <b class="tan">gradually</b> with . . . the demands of God . . . in his or her [life].”<br>
+299 – “Such [divorced and civilly remarried] persons <b class="black">need to feel not</b> <b class="blue">as excommunicated</b> . . . but instead <b class="black">as living members</b>, able to <b class="pink">live and grow</b> in the Church, <b class="black">and experience</b> her as a mother who . . . <b class="pink">encourages them</b> <b class="tan">along the path of life</b> . . .” <br>
+300 – "Priests have the duty <b class="tan">to accompany</b> them [the divorced and remarried] to understand their situation according to the teaching of the Church. . . . What we're speaking of is a <b class="tan">process of accompaniment</b> and <b class="pink">discernment</b> which ‘guides the faithful to <b class="black">an awareness of their situation before God</b>.’"<br>
+301 – “A subject <b class="blue">may know full well the rule</b>, yet have great difficulty in understanding ‘<b class="pink">its inherent value</b>’, or be <b class="black">in a concrete situation</b> <b class="red">which does not allow</b> him or her <b class="purple">to act differently and decide otherwise</b> [i.e, <b class="red">to cease sinning</b>] without further sin.  As the Synod Fathers put it, ‘<b class="red">factors may exist which limit</b> <b class="black">the ability</b> <b class="purple">to make a decision</b>'.  St. Thomas Aquinas himself recognized that someone may possess grace and charity yet not be able to exercise any one of the <b class="purple">virtues</b> well; . . . [i.e,] infused <b class="purple">moral virtues</b> [i.e, stable habits of <b class="purple">acting</b>] . . . .”<br>
+302 – “Under certain circumstances people find it very difficult <b class="red">to act</b> differently. . . .  responsibility with respect <b class="purple">certain actions or decisions</b> is not the same in all cases. . Even the consequences of <b class="purple">actions taken</b> are not the same in all cases.”<br>
+303 – “. . to encourage <b class="tan">the development</b> of an <b class="black">enlightened</b> conscience, <b class="tan">formed and guided</b> . . . and  to encourage an ever greater trust in God's grace.  <b class="blue">Yet conscience can do more than recognize that a given situation does not correspond [to the] Gospel</b>.  It can also recognize . . . what for now is <b class="pink">the most</b> <b class="pink">generous</b> <b class="purple">response which can be given to God</b>, and, come to see with a certain moral security that <b class="red">it is what God himself is asking amid the concrete complexity of one's limits, while yet not fully the objective ideal</b>.<br>
+305 – “Discernment must help to find possible ways of <b class="purple">responding to God</b> <b class="tan">and growing in the midst of limits</b>. <b class="blue">By thinking that everything is black-and-white</b>, we sometimes close off the way of <b class="tan">grace and growth</b>, and discourage paths of sanctification which give glory to God.  Let us remember that ‘<b class="tan">a small step</b>, <b class="black">in the midst of great human limitations</b>, <b class="pink">can be more pleasing to God</b> than <b class="blue">a life which appears outwardly in order</b>, but moves through the day without confronting great difficulties.’”  <br>
+306 – “. . . when dealing with those who have <b class="red">difficulties in living God’s law to the full</b>, the invitation to pursue the <b class="tan">via</b> <b class="pink">Caritas</b> must be clearly heard.”<br>
+308 – “. . . there is a need <b class="tan">to accompany with mercy and patience eventual stages of personal growth</b> <b class="black">as these progressively appear</b>, making room for ‘the Lord's mercy, which spurs us on to do <b class="pink">our</b> [<b class="pink">pretended</b>] <b class="pink">best</b>.’"  
+</td>
+
+            <td class="tableCell col4">2e – “For when a blessing [of sin] is requested, one is expressing a request for <b class="pink">help from God</b>, a plea for <b class="tan">a better life</b>, a trust in a Father <b class="pink">who can help us to live better</b>.”<br>
+3b-c – “b) The Church is a “<b class="black">mystery of missionary communion</b>,” but this communion is not only affective or <b class="blue">eternal</b>, but necessarily implies <b class="black">real</b> <b class="pink">participation</b>: that not only the hierarchy but all the people of God <b class="pink">in different ways</b> and <b class="black">at different levels</b> can make their voice heard and <b class="black">feel part</b> of <b class="tan">the Church’s journey</b>. <br>
+c) It is quite another thing to sacralize or impose a particular synodal <b class="pink">methodology that pleases one group</b>, <b class="blue">to make it the norm and obligatory channel for all</b>, <b class="red">because this would only lead to “freezing”</b> the <b class="tan">synodal journey</b>, ignoring the diverse characteristics of <b class="black">the different particular Churches and</b> the <b class="pink">varied richness</b> of <b class="black">the universal Church</b>.”  [Notice: What Situation Ethicists demand for individuals, Pope Francis is demanding for the entire church!]
+<br>
+4b – “. . . the rights of women or <b class="pink">the need for them to participate, in various ways</b>, in the <b class="blue">[decision-making] leadership</b> of the Church.”  [Totally un-Biblical.]<br>
+5b - There are <b class="pink">many ways to express</b> regret. Often, in people who have a very wounded self-esteem, <b class="red">pleading guilty is a cruel torture</b>, but <b class="pink">the very act of approaching confession is a symbolic expression</b> of repentance and seeking divine help.
+            </td>
+
+            <td class="tableCell col5">23 – “When considered <b class="black">outside of</b> <b class="blue">a liturgical framework</b>, these expressions of faith are found in a realm of <b class="pink">greater spontaneity</b> and <b class="black">freedom</b>. Nevertheless, ‘the <b class="black">optional</b> nature of <b class="purple">pious exercises</b> should in no way be taken to imply an under-estimation or even disrespect for such practices. <b class="pink">The way forward</b> in this area requires <b class="pink">a correct and wise appreciation</b> of the <b class="purple">many riches of popular piety</b>, [and] of <b class="pink">the potentiality</b> of <b class="purple">these same riches</b>.’ In this way, <b class="purple">blessings</b> become <b class="tan">a pastoral resource</b> to be <b class="pink">valued</b> rather than a risk or a problem.”
+<br><br>
+35-38,40 – “.  . . should . . . <b class="purple">perform blessings</b> <b class="pink">spontaneously</b> . . . <b class="black">simple gestures</b> that . . . should not become <b class="blue">a liturgical or semi-liturgical act</b>.  Indeed, such a <b class="blue">ritualization</b> <b class="red">would constitute a serious impoverishment because it would subject</b> <b class="black">a gesture</b> <b class="pink">of great value in popular piety</b> to <b class="blue">excessive control</b>, depriving ministers of <b class="black">freedom and spontaneity</b> in their pastoral <b class="tan">accompaniment</b> of people’s lives. . . . In this regard, there come to mind the following words of the Holy Father, already quoted in part: ‘<b class="purple">Decisions</b> that may be part of pastoral prudence in certain circumstances should not necessarily become <b class="blue">the norm</b>. . . .  For this reason, one <b class="red">should neither provide for nor promote</b> <b class="blue">a ritual</b> for the blessings of couples in an <b class="black">irregular</b> situation.  At the same time, <b class="red">one should not prevent or prohibit</b> <b class="tan">the church’s closeness</b> to people in every situation in which they might seek God’s help through a <b class="black">simple</b> blessing.  In a brief prayer preceding this spontaneous blessing, . . . Indeed, through these <b class="purple">blessings</b>, . . . there is <b class="black">no intention to legitimize anything</b>.”
+<br><br>
+30 – “<b class="green">Pastoral prudence and wisdom</b>— . . .  <b class="tan">may suggest that the ordained ministry join in</b> <b class="pink">the [creative] prayer of those persons</b> who, <b class="red">although in a union that cannot be compared in any way to a marriage,</b> [<b class="red">yet shamelessly</b>] <b class="red">desire</b> to entrust themselves to <b class="blue">the Lord’s mercy</b>, . . .” 
+            </td>
+        </tr>
+
+
+
+
+
+        <tr class="tableRow row3">
+            <td class="tableCell col1">RUDIMENTARYNESS</td>
+            <td class="tableCell col2">56 – “<b class="red">A separation or even an opposition</b> is this established in some cases between <b class="blue">teaching of the precept which is valid in general</b>, and <b class="orange">the norm of the individual conscience</b>, which would in fact make the final decision.  On this basis, an attempt is made to legitimize so-called <b class="green">‘pastoral' solutions</b> <b class="red">contrary</b> <b class="blue">to the teaching of the Magisterium</b> . . .”</td>
+
+            <td class="tableCell col3">294 – "<b class="orange">The choice of a civil marriage or, in most cases, a simple cohabitation</b>, <b class="red">is often not motivated by</b> <b class="orange">prejudice or resistance</b> to <b class="blue">sacramental union</b>, <b class="red">but by</b> <b class="green">cultural or contingent situations</b> [<b class="green">a total euphemistic excuse</b>]."<br>
+295 – "<b class="blue">For the law is itself a gift of God which point the way, a gift for everyone without exception</b>; it can be followed with the help of grace, <b class="red">even though</b> each human being <b class="orange">‘advances gradually with the progressive integration of the gifts of God and the demands of God's definitive and absolute love in his or her entire personal and social life</b>'. <br>
+302 – “For this reason, <b class="blue">a negative judgment about an objective situation</b> <b class="red">does not imply</b> <b class="orange">a judgment about the imputability or culpability of the person</b>. . . .  <b class="orange">Under certain circumstances people find it very difficult to act differently</b>. Therefore, <b class="red">while</b> <b class="blue">upholding a general rule</b>, <b class="red">it is necessary to recognize that</b> <b class="orange">responsibility with respect to certain actions or decisions is not the same in all cases</b>. <b class="green">Pastoral discernment, while taking into account</b> <b class="orange">a person’s properly formed conscience</b>, <b class="green">must take responsibility for these situations [presumably to admit them to the sacraments]</b>."  <br>
+301 – “. . . <b class="orange">[in light of] mitigating factors and situations</b>. . . .  <b class="red">Hence it can no longer simply be said</b> <b class="blue">that all those in any ‘irregular’ situation are living in a state of mortal sin and are deprived of sanctifying grace</b>.  <b class="red">More is involved here than</b> <b class="orange">mere ignorance of the rule</b>.  <b class="blue">A subject may know full well the rule</b>, <b class="red">yet have great difficulty</b> <b class="orange">in understanding ‘its inherent values’, or be in a concrete situation which does not allow him or her to act differently and decide otherwise</b> without further sin.  [<b class="green">Absolutely specious objections</b>!]<br>
+303 – “. . . <b class="orange">individual conscience</b> <b class="green">needs to be better incorporated into the Church's practice</b> in <b class="blue">certain situations which do not objectively embody our understanding of marriage</b>.”<br>
+304 – “<b class="red">It is reductive</b> <b class="blue">simply to consider whether or not</b> <b class="orange">an individual's actions</b> correspond to <b class="blue">a general law or rule</b>, <b class="green">because that is not enough to discern and ensure full fidelity to God</b> . . . ”  [<b class="green">Another specious objection!</b>]  "It is true that <b class="blue">general rules set forth a good which can never be disregarded or neglected</b>, <b class="red">but in their formulation they cannot provide absolutely</b> for <b class="orange">all particular situations</b>."<br>
+307 – "<b class="green">To show understanding</b> in the face of <b class="orange">exceptional situations</b> <b class="red">never implies</b> dimming the light of <b class="blue">the fuller ideal</b>, or proposing less than <b class="blue">what Jesus offers to the human being</b>. Today, more important than <b class="green">the pastoral care of failures</b> is . . .”<br>
+308 – “I understand those who prefer a <b class="blue">more rigorous pastoral care which leaves no room for confusion</b>. <b class="red">But</b> I sincerely believe that Jesus wants a Church . . . who, <b class="blue">while clearly expressing her objective teaching</b>, “always <b class="green">does what good she can</b>, <b class="red">even if</b> <b class="green">in the process, her shoes get soiled</b> by <b class="orange">the mud of the street</b>.”<br>
+312 – “. . . a framework and a setting which help us <b class="red">avoid</b> <b class="blue">a cold bureaucratic morality</b> in dealing with <b class="orange">more sensitive issues</b>. <b class="green">Instead, it sets us in the context of a pastoral discernment . . . which is ever ready to understand, . . .  and above all integrate</b>.<br>
+293 – “ . . . they can provide occasions for <b class="green">pastoral care</b> with a view to <b class="blue">the eventual celebration of the sacrament of marriage</b>. . . . [<b class="orange">Fornicators</b>] too need <b class="green">pastoral care that is merciful and helpful</b>.  For the Church’s <b class="green">pastors</b> are <b class="red">not only</b> <b class="blue">responsible for promoting Christian marriage</b>, <b class="red">but also</b> the “<b class="green">pastoral discernment</b> of the situations <b class="orange">of a great many who no longer live this reality</b>.  Entering into <b class="green">pastoral dialogue</b> with these persons [can lead to eventual conversion.]”<br>
+299 – ". . . the baptized who are <b class="orange">divorced and civilly remarried</b> <b class="green">need to be more fully integrated into Christian communities . . . . The logic of integration is the key to their pastoral care, a care which would allow them . . .  to know that they can have a joyful and fruitful experience in it. . . . Their participation</b> . . . <b class="red">necessarily requires discerning which</b> <b class="blue">of the various forms of exclusion currently practised in the liturgical, pastoral, educational and institutional framework</b>, <b class="red">can be surmounted</b>."
+            </td>
+
+            <td class="tableCell col4">1f – “. . . <b class="blue">the texts of Scripture and the testimonies of tradition</b> need <b class="green">an interpretation</b> that <b class="red">allows us to distinguish</b> <b class="blue">their perennial substance</b> <b class="red">from</b> <b class="orange">cultural conditioning</b>. <b class="blue">It is evident, for example, in . . .  some New Testament considerations on women (1 Cor 11:3-10; 1 Tim 2:11-14)</b>. . . .  that <b class="green">cannot be repeated literally today</b>.  [Yes they can, for Paul explicitly calls these verses “a command of the Lord” (1 Cor. 14:37)]<br>
+2c-e – “c) For this reason the Church avoids any kind of rite or sacramental that could contradict <b class="blue">this conviction</b> and give the impression that something that is not marriage is recognized as <b class="blue">marriage</b>. <br>
+d) In dealing with people, however, we must not lose the <b class="green">pastoral charity</b> that must permeate all our decisions and attitudes. <b class="blue">The defense of objective truth</b> is <b class="red">not the only expression of this charity, which is also made up of</b> <b class="green">kindness, patience, understanding, tenderness, and encouragement</b>. <b class="red">Therefore, we cannot become</b> <b class="blue">judges who only deny, reject, exclude</b>. <br>
+e) For this reason, <b class="green">pastoral prudence</b> <b class="red">must adequately discern whether there are</b> <b class="orange">forms of blessing, requested by one or more persons, that [bless the sin</b>, <b class="red">but at least</b>] <b class="blue">do not transmit a mistaken conception of marriage</b>.” <br>
+2f – “On the other hand, <b class="red">although</b> <b class="blue">there are situations that from an objective point of view are not morally acceptable</b>, <b class="green">pastoral charity itself demands that we do not simply treat as ‘sinners’</b> <b class="orange">other people whose guilt or responsibility may be due to their own fault or responsibility [yet] attenuated by various factors that influence subjective imputability</b> (cf. St. John Paul II, Reconciliatio et Paenitentia, 17).”<br>
+5c - I maintain that <b class="green">we should not demand</b> from the faithful <b class="red">overly precise and certain</b> <b class="blue">proposals for amendment [such as exiting the lifestyle of temptation]</b>, <b class="orange">which in the end end up being abstract or even egotistic</b>, <b class="red">but that</b> <b class="blue">even the predictability of a new fall</b> [<b class="green">can be tolerated</b>, since at least it] “does not compromise <b class="orange">the authenticity of the intention</b> [<b class="orange">here & now</b>].”  
+            </td>
+
+            <td class="tableCell col5"><u style="font-size: 16px;">The Church’s Conscience</u>:<br>
+“. . . <b class="green">pastoral</b> . . .”   [Repeated 20 times, as the 3rd most used word].
+<br><br>
+4 – “It is <b class="orange">a matter of avoiding that something that is not marriage is being recognized as marriage</b>.”
+<br><br>
+<u style="font-size: 16px;">The Priest’s Conscience</u>:<br>
+12 – “<b class="red">One must also avoid the risk</b> of reducing the meaning of <b class="orange">blessings</b> to [just <b class="blue">formal, liturgical blessings</b>], <b class="red">for it would lead us to [wrongly] expect the same moral conditions</b> <b class="orange">for a simple blessing</b> that are called for <b class="blue">in the reception of the sacraments</b>.  <i>[Oh, what an intolerable burden!]</i>  Such <b class="red">a risk</b> <b class="green">requires that we broaden this perspective further</b>. <b class="red">Indeed, there is the danger</b> that <b class="green">a pastoral gesture that is so beloved and widespread</b> <b class="red">will be subjected to too many moral prerequisites</b>, which, under the claim of <b class="blue">control</b>, <b class="red">could overshadow</b> <b class="orange">the</b> [<b class="orange">assumed to be</b>] <b class="orange">unconditional power of God’s love</b> [<b class="orange">in the priest’s heart</b>] that forms the basis for <b class="green">the gesture of blessing</b>.”
+<br><br>
+<u style="font-size: 16px;">The Sinner’s Conscience</u>:<br>
+13 – “Pope Francis urged us <b class="red">not to</b> ‘<b class="red">lose</b> <b class="green">pastoral charity</b>,’ . . . <b class="red">and to avoid</b> being “<b class="blue">judges who only deny, reject, and exclude</b> [sinners’ <b class="orange">seared consciences</b> from the Church].”
+<br><br>
+26 – “For, the [2023] Respuestas invite discernment concerning the possibility of ‘<b class="green">forms of blessing, requested by one or more persons</b>, that <i>[at least (so Francis can feign doctrinal vigilance)]</i> <b class="blue">do not convey an erroneous conception of marriage</b>’ and <i>[yet (so Francis can let every other sin run amok)]</i>, in situations that are <b class="blue">morally unacceptable from an objective point of view</b>, <b class="green">account for the fact that ‘pastoral charity requires us</b> not <b class="red">to treat simply as “sinners”</b> those whose <b class="blue">guilt or responsibility</b> <b class="red">may be attenuated</b> <b class="orange">by various factors affecting subjective imputability</b>.’”
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+        <tr class="tableRow row4">
+            <td class="tableCell col1">CONSCIENCE</td>
+            <td class="tableCell col2">55 – “On the other hand, they [i.e, Situational Ethicists] give maximum attention to the value of <b class="orange">conscience</b>.”</td>
+
+            <td class="tableCell col3">[See all <b class="pink">Pink</b>, <b class="orange">Orange</b>, and <b class="black">Bold Black</b> words above, which also emphasize conscience.] <br>
+300 – "Useful in this process is [not a statement of the indissolubility of marriage but] an examination of <b class="orange">conscience</b> through moments of reflection and repentance.  The divorced and remarried <b class="orange">should ask themselves</b>: how did they act toward their children  when the conjugal union entered into crisis; whether or not they made attempts at reconciliation; what has becoming the abandoned party; what consequences the new relationship has on the rest of the family and the community of the faithful; and what example is being set for young people who are preparing for marriage. . . .  What we are speaking of is a process of accompaniment and discernment . . . .  Conversation with the priest <b class="orange">in the internal forum contributes to the formation of a correct judgment</b> . . . .  For this <b class="orange">discernment</b> to happen, the following conditions must necessarily be present: humility, discretion and. . . .  These attitudes are essential to avoid the grave danger of <b class="orange">misunderstandings</b> . . .”  <br>
+304 – "At the same time, . . .  What is part of <b class="orange">a practical discernment in particular circumstances</b> cannot be elevated to the level of a rule." <br>
+305 – "’. . .  Natural law could not be presented as an already established set of rules that impose themselves a priori on the moral subject; rather, it is a source of objective inspiration for <b class="orange">the deeply personal process of making decisions</b>."  
+</td>
+
+            <td class="tableCell col4"></td>
+            <td class="tableCell col5"></td>
+        </tr>
+    </table>
+    
+
+ 
+    <hr id="footerDivider">
+
+
+
+
+    <div id="endMatter" class="container">
+
+            <script>
+
+
+
+                function alertCitation() {
+                    var NewestEdition = '';
+                    alert('Basic form: \n Author. Title. Edition. Place of production: Producer, Date of copyright or production.\n------------------------------\nDavid Rudmin. RebukeFrancis.com.  Online. David Rudmin: Harrisonburg, VA, 2023.')
+                }
+            </script>
+    
+            <div id="links" class="row" style="width: auto; border:0px; margin: 0px 40px;">
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./index.html"><li>Home</li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./about.pdf"><li>About</li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./rebuke.html"><li>Academic Rebuke </li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><li>Situation Ethics</li></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./flyer.pdf"><li>Print flyers</li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./index.html#links" onclick="alertCitation()"><li>Citation</li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12"><a href="./videos.html"><li>Videos</li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12">
+                       <a href="https://www.paypal.com/donate/?hosted_button_id=68DL3L2JCWD8J"><li>Donate</li></a></ul>
+                <ul class="fix1 col-12 col-xl-4 col-md-6 col-sm-12">
+                    <a href="https://www.facebook.com/profile.php?id=100095189114708" title="Like, on Facebook!">
+                        <img class="bottomLogo" src="images/fb.png"  /></a>
+                </ul>
+            </div>
+    </div>
+    <br>
+    <hr style="width: 10%; margin: 0px auto; background-color: black; height: 5px;">
+    <br>
+    <div style="width: 100%; margin: 0px auto; text-align: center;" id="copyrightArea" 
+            style="position: relative; ">
+            <img src="images/cc-by.png" style="position: relative; display: inline-block; float:  center; width: 100px; height: auto;" />
+            <div style="position: relative; display: inline-block; float:  center; margin-left: 40px;">No Copyright, 2023.<br>Citations of David Rudmin are appreciated.</div>
+    </div>
+    <br><br>
+</body>
+</html>
